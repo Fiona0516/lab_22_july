@@ -87,10 +87,10 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-  var message = '2,3,4 was passed in as an array of numbers, and 9 is their sum.';
   var output = sum(sum(testArray[0],testArray[1])[0],testArray[2])[0];
+  var message = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + output + ' is their sum.';
   console.log('2,3,4 was passed in as an array of numbers, and 9 is their sum.is the expected output.');
-  console.log (testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + output + ' is their sum.is the actual output.');
+  console.log (message + 'is the actual output.');
   return[output,message];
 }
 
@@ -112,10 +112,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-  var message = 'The numbers 2,3,4 have a product of 24.';
   var output = multiply(multiply(testArray[0],testArray[1])[0],testArray[2])[0];
+  var message = 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + output + '.';
   console.log('The numbers 2,3,4 have a product of 24.is the expected output.');
-  console.log('The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + output + '.is the actual output.' );
+  console.log(message + 'is the actual output.' );
   return [output, message];
 }
 testMultiplyArray(testArray);
