@@ -17,7 +17,7 @@ function sum(a,b){ //eslint-disable-line
 }
 
 // Here is the test for sum(); uncomment it to run it
-//testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -39,7 +39,7 @@ function multiply(a,b){ //eslint-disable-line
 }
 
 // Here is the test for multiply(); uncomment it to run it
-//testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -112,8 +112,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-
+  var message = 'The numbers 2,3,4 have a product of 24.';
+  var output = multiply(multiply(testArray[0],testArray[1])[0],testArray[2])[0];
+  console.log('The numbers 2,3,4 have a product of 24.is the expected output.');
+  console.log('The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + output + '.is the actual output.' );
+  return [output, message];
 }
+testMultiplyArray(testArray);
 
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(2,3,4);
